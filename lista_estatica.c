@@ -44,11 +44,27 @@ void imprimir(int registro, Lista_Estatica *li){
 
 // Modificar um funcionário da lista
 
-void modificarFunc(int registro){
+void modificarFunc(int registro, Lista_Estatica *li){
 	int opcao = 0;
 	printf("Informe o que deseja modificar:\n");
 	printf("[1] - Nome\n");
-	printf("[2] - ");
+	printf("[2] - Salario\n");
+	printf("[3] - Cargo\n"); scanf("%d",&opcao);
+	
+	switch(opcao){
+		case 1:
+			fflush(stdin);
+			printf("Informe o novo nome: "); gets(li->func[registro]->nome);
+			break;
+		case 2:
+			fflush(stdin);
+			printf("Informe o novo salário: "); scanf("%f",&li->func[registro]->salario);
+			break;
+		case 3:
+			fflush(stdin);
+			printf("Informe o novo cargo: "); gets(li->func[0]->cargo);
+			break;
+	}
 	
 }
 

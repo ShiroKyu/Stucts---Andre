@@ -26,6 +26,10 @@ Lista_Estatica *remover(int registro, Lista_Estatica *li);
 
 void imprimir(int registro, Lista_Estatica *li);
 
+/* Modificar funcionário */
+
+void modificarFunc(int registro, Lista_Estatica *li);
+
 
 
 
