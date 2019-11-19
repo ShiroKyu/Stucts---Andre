@@ -9,16 +9,18 @@ int main(){
 	
 	Lista_Estatica *li = criarLista();
 	int opcao = 0;
+	int k;
 	
 	printf("==== Programa para cadastro de funcionários ====\n\n");
 	
-	while(opcao != 5){
+	while(opcao != 6){
 		printf("Informe o que deseja fazer:\n");
 		printf("[1] - Cadastrar um novo funcionário\n");
 		printf("[2] - Remover um funcionário\n");
 		printf("[3] - Modificar um funcionário\n");
 		printf("[4] - Imprimir todos os funcionários\n"); 
-		printf("[5] - Sair "); scanf("%d",&opcao);
+		printf("[5] - Buscar um funcionário\n");
+		printf("[6] - Sair "); scanf("%d",&opcao);
 		printf("\n");
 		
 		switch(opcao){
@@ -38,10 +40,16 @@ int main(){
 				break;
 			
 			case 4:
-				imprimir(li);
+				for(k=0; k<li->qtd; k++){
+					imprimir(li, k);
+				}
 				break;
 			
 			case 5:
+				buscaFunc(li);
+				break;
+				
+			case 6:
 				break;
 				
 			default:

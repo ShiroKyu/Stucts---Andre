@@ -7,6 +7,15 @@
 
 /*Criar funcionário */
 
+struct funcionario {
+	int registro;
+	int identificador;
+	char nome[50];
+	float salario;
+	char cargo[50];
+};
+
+
 Funcionario *criaFunc(){
 	Funcionario *criar = (Funcionario*) malloc(sizeof(Funcionario));
 	if(criar){

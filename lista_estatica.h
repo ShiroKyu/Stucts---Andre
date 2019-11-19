@@ -28,13 +28,19 @@ Lista_Estatica *removerFunc(Lista_Estatica *li);
 
 /* Imprime os funcionários da lista */
 
-void imprimir(Lista_Estatica *li);
+void imprimir(Lista_Estatica *li, int registro);
 
 /* Modificar funcionário */
 
 Lista_Estatica *modificarFunc(Lista_Estatica *li);
 
+/* Buscar um funcionário */
 
+void buscaFunc(Lista_Estatica *li);
+
+/* Ordenar a lista */
+
+void ordenarLista(Lista_Estatica *li);
 
 
 

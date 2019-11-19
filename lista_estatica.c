@@ -64,17 +64,14 @@ Lista_Estatica *removerFunc(Lista_Estatica *li){
 
 // Imprimir um funcionário da lista
 
-void imprimir(Lista_Estatica *li){
-	int k;
-	
-	for(k=0; k<li->qtd; k++){
-		printf("Funcionário:\n\n");
-		printf("Registro: %d\n",li->func[k]->registro);
-		printf("Identificador: %d\n",li->func[k]->identificador);
-		printf("Nome: %s\n",li->func[k]->nome);
-		printf("Salario: R$%.2f\n",li->func[k]->salario);
-		printf("Cargo: %s\n\n",li->func[k]->cargo);
-	}
+void imprimir(Lista_Estatica *li, int registro){
+	printf("Funcionário:\n\n");
+	printf("Registro: %d\n",li->func[registro]->registro);
+	printf("Identificador: %d\n",li->func[registro]->identificador);
+	printf("Nome: %s\n",li->func[registro]->nome);
+	printf("Salario: R$%.2f\n",li->func[registro]->salario);
+	printf("Cargo: %s\n\n",li->func[registro]->cargo);
+
 }
 
 // Modificar um funcionário da lista
@@ -83,7 +80,7 @@ Lista_Estatica *modificarFunc(Lista_Estatica *li){
 	int opcao = 0;
 	int registro;
 	
-	printf("Informe o registro do funcionário a ser removido ou cancele a operação com \"-1\": "); scanf("%d",&registro);
+	printf("Informe o registro do funcionário a ser modificado ou cancele a operação com \"-1\": "); scanf("%d",&registro);
 	printf("\n");
 	if(registro == -1){
 		return li;
@@ -123,5 +120,16 @@ Lista_Estatica *modificarFunc(Lista_Estatica *li){
 	return li;
 }
 
+void buscaFunc(Lista_Estatica *li){
+	int registro;	
+	printf("Informe o registro do funcionário a ser imprimido ou cancele a operação com \"-1\": "); scanf("%d",&registro);
+	printf("\n");
+	if(registro != -1){
+		imprimir(li, registro);
+		printf("\n");
+	}
+	printf("\n");
+	
+}
 
 
