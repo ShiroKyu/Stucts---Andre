@@ -1,6 +1,6 @@
-//02
 #include "Funcionario.h"
-#define TAM 5
+#define TRUE 1
+#define FALSE 0
 
 /* Definindo a estrutura da lista */
 typedef struct lista_estatica Lista_Estatica;
@@ -16,19 +16,24 @@ Lista_Estatica *criarLista();
 
 /* Adicionar funcionário */
 
-Lista_Estatica *adicionaFunc(int registro, char nome[50], float salario, char cargo[50], Lista_Estatica *li);
+Lista_Estatica *adicionaFunc(Lista_Estatica *li);
+
+/* Verificador de registros, para ver se já existe um funcionário com o registro atual */
+
+int verificadorIdentificador(int registro, Lista_Estatica *li);
 
 /* Remove um funcionário */
 
-Lista_Estatica *remover(int registro, Lista_Estatica *li);
+Lista_Estatica *removerFunc(Lista_Estatica *li);
 
-/* Imprime um funcionário */
+/* Imprime os funcionários da lista */
 
-void imprimir(int registro, Lista_Estatica *li);
+void imprimir(Lista_Estatica *li);
 
 /* Modificar funcionário */
 
-void modificarFunc(int registro, Lista_Estatica *li);
+Lista_Estatica *modificarFunc(Lista_Estatica *li);
+
 
 
 
