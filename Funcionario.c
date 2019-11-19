@@ -16,6 +16,7 @@ Funcionario *criaFunc(){
 		fflush(stdin);
 		printf("Informe o cargo desse funcionário: "); gets(criar->cargo);
 		printf("\n");
+		fflush(stdin);
 	}
 	return criar;
 }

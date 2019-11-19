@@ -41,6 +41,9 @@ int main(){
 			
 			case 5:
 				break;
+				
+			default:
+				break;
 		}
 	}
 	

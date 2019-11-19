@@ -100,14 +100,20 @@ Lista_Estatica *modificarFunc(Lista_Estatica *li){
 			case 1:
 				fflush(stdin);
 				printf("Informe o novo nome: "); gets(li->func[registro]->nome);
+				printf("\n");
+				fflush(stdin);
 				break;
 			case 2:
 				fflush(stdin);
 				printf("Informe o novo salário: "); scanf("%f",&li->func[registro]->salario);
+				printf("\n");
+				fflush(stdin);
 				break;
 			case 3:
 				fflush(stdin);
-				printf("Informe o novo cargo: "); gets(li->func[0]->cargo);
+				printf("Informe o novo cargo: "); gets(li->func[registro]->cargo);
+				printf("\n");
+				fflush(stdin);
 				break;
 			case 4:
 				break;
