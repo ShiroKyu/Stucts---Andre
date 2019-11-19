@@ -10,6 +10,8 @@ int main(){
 	Lista_Estatica *li = criarLista();
 	int opcao = 0;
 	
+	printf("==== Programa para cadastro de funcionários ====\n\n");
+	
 	while(opcao != 5){
 		printf("Informe o que deseja fazer:\n");
 		printf("[1] - Cadastrar um novo funcionário\n");
