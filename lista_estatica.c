@@ -50,6 +50,7 @@ int verificadorIdentificador(int registro, Lista_Estatica *li){
 
 Lista_Estatica *removerFunc(Lista_Estatica *li){
 	int registro;
+	int k;
 	
 	printf("Informe o registro do funcionário a ser removido ou cancele a operação com \"-1\": "); scanf("%d",&registro);
 	printf("\n");
@@ -59,6 +60,7 @@ Lista_Estatica *removerFunc(Lista_Estatica *li){
 	
 	free(li->func[registro]);
 	li->func[registro] = NULL;
+	
 	return li;
 }
 
